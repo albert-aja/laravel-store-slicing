@@ -11963,12 +11963,12 @@ body {
 }
 
 .page-content {
-  margin-top: 6.2em;
+  margin-top: 6em;
 }
 
 footer {
   border-top: 1px solid #e4e4e4;
-  margin-top: 9.4em;
+  margin-top: 0.4em;
 }
 
 footer p {
@@ -11977,6 +11977,10 @@ footer p {
 
 .form-control {
   background-color: #f3f3f3;
+}
+
+a {
+  text-decoration: none;
 }
 
 .navbar-store {
@@ -11995,8 +11999,16 @@ footer p {
   }
 }
 
+.navbar-store .nav-item.active .nav-link {
+  color: #29a867;
+}
+
 .navbar-store .profile-picture {
   max-height: 2.8em;
+}
+
+.navbar-store .navbar-logo {
+  width: 50%;
 }
 
 .navbar-store .card-badge {
@@ -12010,7 +12022,7 @@ footer p {
   margin-left: -0.65em;
 }
 
-.navbar-store .navbar-fixed-top.scrolled {
+.navbar-fixed-top.scrolled {
   background-color: #fff !important;
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
@@ -12027,5 +12039,87 @@ footer p {
 
 .page-home .store-new-products {
   margin-top: 0.65em;
+}
+
+.component-categories {
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 1.8em 1.8em 0.6em;
+  margin-bottom: 1.2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.component-categories:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  text-decoration: none;
+}
+
+.component-categories .categories-text {
+  color: #0c0d36;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 0.8em;
+}
+
+.product-thumbnail {
+  margin-bottom: 1em;
+  border: 0;
+}
+
+.product-thumbnail .card-img {
+  overflow: hidden;
+  border-radius: 0.6rem;
+  position: relative;
+  height: 14rem;
+}
+
+.product-thumbnail .product-image {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  -o-object-position: center center;
+     object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+.product-thumbnail:hover .product-image {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.product-thumbnail .product-desc {
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #0c0d36;
+}
+
+.product-thumbnail .product-price {
+  font-weight: 500;
+  font-size: 1em;
+  color: #ff7158;
+}
+
+.store-breadcrumb .breadcrumb {
+  background: transparent;
+  padding: 0.6em 0;
+}
+
+.store-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  padding: 0 1.5em;
+}
+
+.store-breadcrumb .breadcrumb-item.active {
+  font-weight: 300;
+  color: #0c0d36;
+}
+
+.store-breadcrumb a {
+  color: #979797;
 }
 /*# sourceMappingURL=main.css.map */

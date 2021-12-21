@@ -11,10 +11,17 @@
         margin: 0 0.6em;
       }
     }
+    &.active .nav-link {
+      color: #29a867;
+    }
   }
 
   .profile-picture {
     max-height: 2.8em;
+  }
+
+  .navbar-logo {
+    width: 50%;
   }
 
   .card-badge {
@@ -27,9 +34,9 @@
     color: #fefefe;
     margin-left: -0.65em;
   }
+}
 
-  .navbar-fixed-top.scrolled {
-    background-color: #fff !important;
-    transition: background-color 0.2s linear;
-  }
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 0.2s linear;
 }

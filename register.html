@@ -76,7 +76,7 @@
                 dengan cara terbaru
               </h2>
               <form class="mt-3">
-                <div class="form-group">
+                <div class="form-group mb-3">
                   <label>Name</label
                   ><input
                     type="text"
@@ -85,7 +85,7 @@
                     autofocus
                   />
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                   <label>Email</label
                   ><input
                     type="email"
@@ -93,16 +93,14 @@
                     v-model="email"
                   />
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                   <label>Password</label
                   ><input type="password" class="form-control" />
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                   <label>Store</label>
                   <p class="text-muted">Apakah anda juga ingin membuka toko?</p>
-                  <div
-                    class="form-check form-check-inline"
-                  >
+                  <div class="form-check form-check-inline">
                     <input
                       type="radio"
                       name="is_store-open"
@@ -111,10 +109,11 @@
                       v-model="is_store_open"
                       :value="true"
                     />
-                    <label for="openStoreTrue" class="form-check-label">Iya, Boleh</label>
-                  <div
-                    class="form-check form-check-inline"
-                  >
+                    <label for="openStoreTrue" class="form-check-label"
+                      >Iya, Boleh</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
                     <input
                       type="radio"
                       name="is_store-open"
@@ -123,30 +122,24 @@
                       v-model="is_store_open"
                       :value="false"
                     />
-                    <label for="openStoreFalse" class="form-check-label">Enggak, makasih</label>
+                    <label for="openStoreFalse" class="form-check-label"
+                      >Enggak, makasih</label
+                    >
                   </div>
                 </div>
-                <div class="form-group" v-if="is_store_open">
+                <div class="form-group mb-3" v-if="is_store_open">
                   <label>Nama Toko</label
-                  ><input
-                    type="text"
-                    class="form-control"
-                  />
+                  ><input type="text" class="form-control" />
                 </div>
-                <div class="form-group" v-if="is_store_open">
-                  <label>Kategori Toko</label
-                  >
+                <div class="form-group mb-3" v-if="is_store_open">
+                  <label>Kategori Toko</label>
                   <select name="category" class="form-control form-select">
                     <option value="" disabled>Select Category</option>
                   </select>
                 </div>
-                <a
-                  href="/dashboard.html"
-                  class="btn btn-success d-block mt-4"
+                <a href="/dashboard.html" class="btn btn-success d-block mt-4"
                   >Sign Up Now</a
-                ><a
-                  href="/register.html"
-                  class="btn btn-signup d-block mt-4"
+                ><a href="/register.html" class="btn btn-signup d-block mt-2"
                   >Sign In</a
                 >
               </form>
@@ -176,27 +169,27 @@
     <script src="/vendor/vue/vue.js"></script>
     <script src="https://unpkg.com/vue-toasted"></script>
     <script>
-      Vue.use(Toasted)
+      Vue.use(Toasted);
 
       let register = new Vue({
-        el: '#register',
-        mounted(){
+        el: "#register",
+        mounted() {
           AOS.init();
           this.$toasted.error(
             "Maaf, tampaknya email sudah terdaftar pada sistem kami.",
             {
-              position: 'top-center',
-              className: 'rounded',
+              position: "top-center",
+              className: "rounded",
               duration: 1000,
             }
           );
         },
         data: {
-          name: 'Albert',
-          email: 'albert@gmail.com',
-          password: '',
+          name: "Albert",
+          email: "albert@gmail.com",
+          password: "",
           is_store_open: true,
-          store_name : ''
+          store_name: "",
         },
       });
     </script>
